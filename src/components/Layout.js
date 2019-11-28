@@ -17,7 +17,7 @@ class PageLayout extends React.Component {
           <Layout style={{ padding: "24px 0", background: "#fff" }}>
             <Sider />
             <Content style={{ padding: "0 24px", minHeight: "60vh" }}>
-          <h1>asdfjasodifjaqoiewjojoijapgoijwerpoigjweproigjweproigjweproighjwperiougjwperioughjwpeoriughnw[oeirghjwqporejkgw[poergjkw[eiorgjw[eorigjwojkfnbjvkogbndspiojfgnheopirtjgqw[poeirhjgw[eritpuvynmwe[riotyutnwpeoiurynvwpeoirtuynbwpoeiruyn </h1>
+              {this.props.children}
             </Content>
           </Layout>
         </Content>

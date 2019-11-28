@@ -26,7 +26,7 @@ class PageSider extends React.Component {
           </Menu.Item>
           <Menu.Item key="4">
             <Icon type="container" theme="filled" />
-            Arhive
+            Archive
           </Menu.Item>
         </Menu>
       </Sider>
