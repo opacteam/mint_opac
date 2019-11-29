@@ -2,11 +2,10 @@ import React from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import Sider from "./Sider";
-import { Layout, Menu, Icon } from "antd";
+import { Layout, Menu } from "antd";
 import Breadcrumb from "./Breadcrumb";
 const { Content } = Layout;
-const { SubMenu } = Menu;
-
+import { BackTop } from "antd";
 class PageLayout extends React.Component {
   render() {
     return (
@@ -19,6 +18,7 @@ class PageLayout extends React.Component {
             <Content style={{ padding: "0 24px", minHeight: "60vh" }}>
               {this.props.children}
             </Content>
+            <BackTop />
           </Layout>
         </Content>
         <Footer />
