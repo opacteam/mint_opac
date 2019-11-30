@@ -1,14 +1,14 @@
 import React from "react";
 import { Layout, Menu, Icon } from "antd";
 const { Sider } = Layout;
-const { SubMenu } = Menu;
+import { OnPageContext } from "../context";
 class PageSider extends React.Component {
   render() {
     return (
       <Sider breakpoint="lg" collapsedWidth="0">
         <Menu
           mode="inline"
-          defaultSelectedKeys={["1"]}
+          defaultSelectedKeys={[this.context]}
           defaultOpenKeys={["sub1"]}
           style={{ height: "100%" }}
         >
@@ -33,5 +33,5 @@ class PageSider extends React.Component {
     );
   }
 }
-
+PageSider.contextType = OnPageContext;
 export default PageSider;
