@@ -1,22 +1,15 @@
 import React from "react";
 import { Card, Col, Row, Typography } from "antd";
 const { Meta } = Card;
-const DESCRIPTION = {
-  archive:
-    "The archives collection contains historic state government records about the general assembly, state agencies, governors, natural resources, land grants and more.",
-  library:
-    "The library collection includes books, city and county directories, newspapers, biographies, family histories, historical magazines, and more",
-  museum:
-    "The museum collection contains more than 80,000 objects that document Iowa history including airplanes, marbles, minerals, quilts, furniture and more.",
-  special:
-    "Special collections include photographs, manuscripts, ephemera, maps, and audio and video recordings."
-};
+import { DESCRIPTION } from "../../messages";
+import { LINK } from "../../services";
 class Cards extends React.Component {
   render() {
     return (
       <Row gutter={32} className="cards-row">
         <Col xs={24} lg={12} className="cards-col">
           <Card
+            onClick={_ => (window.location = LINK.archive)}
             className="cards-card"
             cover={<div className="cards-cover cover-archive"></div>}
           >
@@ -30,6 +23,7 @@ class Cards extends React.Component {
         </Col>
         <Col xs={24} lg={12} className="cards-col">
           <Card
+            onClick={_ => (window.location = LINK.library)}
             className="cards-card"
             cover={<div className="cards-cover cover-library"></div>}
           >
@@ -43,6 +37,7 @@ class Cards extends React.Component {
         </Col>{" "}
         <Col xs={24} lg={12} className="cards-col">
           <Card
+            onClick={_ => (window.location = LINK.museum)}
             className="cards-card"
             cover={<div className="cards-cover cover-museum"></div>}
           >
@@ -56,6 +51,7 @@ class Cards extends React.Component {
         </Col>{" "}
         <Col xs={24} lg={12} className="cards-col">
           <Card
+            onClick={_ => (window.location = LINK.special)}
             className="cards-card"
             cover={<div className="cards-cover cover-special"></div>}
           >
