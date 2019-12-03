@@ -4,21 +4,22 @@ const { Search } = Input;
 
 class SearchBar extends React.Component {
   render() {
+    let action = this.props.searchLink;
+
     return (
       <>
         {" "}
         <Form
+          action={action}
           className="login-form"
+          method="POST"
           onSubmit={e => {
-            console.log("test");
-
-            let form = this.props.form;
-
-            console.log(form);
+            console.log(e);
           }}
         >
           <Form.Item>
             <Input
+              name="KEYWORD_CL"
               prefix={<Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />}
               type="text"
               placeholder="Search Keyword"
@@ -40,5 +41,5 @@ class SearchBar extends React.Component {
     );
   }
 }
-const SearchForm = Form.create({ name: "search" })(SearchBar);
+const SearchForm = Form.create()(SearchBar);
 export default SearchForm;
