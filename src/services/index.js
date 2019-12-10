@@ -25,6 +25,22 @@ export function xmlStrToJson(xml, arrayForm) {
   return jsonObj;
 }
 
+export function isGrid(data) {
+  return data.grid_view === "#";
+}
+
+export function extractTopBarData(data) {
+  return {
+    grid: data.grid_view,
+    list: data.list_view,
+    keyword: data.search_statement,
+    range: data.record_range,
+    total: data.record_count,
+    next: data.next_page ? data.next_page.a._href : "#",
+    prev: data.prev_page ? data.prev_page.a._href : "#"
+  };
+}
+
 export function getCookie(cname) {
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie);

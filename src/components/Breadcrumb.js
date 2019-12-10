@@ -6,7 +6,6 @@ class PageBreadcrumb extends React.Component {
     super(props);
   }
   render() {
-    console.log(this.props.pages);
     return (
       <Breadcrumb style={{ margin: "16px 0" }}>
         {this.props.pages.map((page, index) => (

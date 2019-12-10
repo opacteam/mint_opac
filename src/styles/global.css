@@ -1,0 +1,15 @@
+@media only screen and (min-width: 600px) {
+  #main-content {
+    padding: 20px 60px;
+  }
+}
+
+.summary-list-card {
+  margin-top: 25px !important;
+  margin-bottom: 25px !important;
+}
+
+.summary-grid-card {
+  margin-top: 12px !important;
+  margin-bottom: 12px !important;
+}

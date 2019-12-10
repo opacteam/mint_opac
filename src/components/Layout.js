@@ -12,16 +12,17 @@ class PageLayout extends React.Component {
     return (
       <Layout>
         <Header />
-        <Content style={{ padding: "0 50px" }}>
-          <Breadcrumb pages={["Home"]} />
-          <Layout style={{ padding: "24px 0", background: "#fff" }}>
-            <Sider />
-            <Content style={{ padding: "0 24px", minHeight: "60vh" }}>
+        <Layout>
+          <Sider />
+          <Content id="main-content">
+            <Breadcrumb pages={["Home"]} />
+            <Layout style={{ padding: "24px 0", background: "#fff" }}>
               {this.props.children}
-            </Content>
-            <BackTop />
-          </Layout>
-        </Content>
+
+              <BackTop />
+            </Layout>
+          </Content>
+        </Layout>
         <Footer />
       </Layout>
     );

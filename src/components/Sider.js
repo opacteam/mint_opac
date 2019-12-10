@@ -5,8 +5,9 @@ import { OnPageContext } from "../context";
 import { LINK } from "../services";
 class PageSider extends React.Component {
   render() {
+
     return (
-      <Sider breakpoint="lg" collapsedWidth="0">
+      <Sider breakpoint="xl" collapsedWidth="0" width={250}>
         <Menu
           mode="inline"
           defaultSelectedKeys={[this.context]}
