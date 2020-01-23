@@ -25,8 +25,8 @@ class Museum extends React.Component {
             </Row>
             <Title level={2}>Museum</Title>
             <Typography.Text>{DESCRIPTION.museum}</Typography.Text>
-            <Row type="flex" justify="center" gutter={32}>
-              <Col xs={24} lg={12}>
+            <Row type="flex" gutter={32}>
+              <Col xs={24} lg={18}>
                 <SearchBar searchLink={searchLink} />
               </Col>
             </Row>
