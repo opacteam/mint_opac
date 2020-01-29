@@ -29,7 +29,7 @@ class ListView extends React.Component {
                   key={index}
                   hoverable
                   actions={[<Icon type="setting" key="setting" />]}
-                  onClick={_=>wind}
+                  onClick={_ => (window.location = record.link)}
                 >
                   <Row justify="center">
                     <Col span={24}>

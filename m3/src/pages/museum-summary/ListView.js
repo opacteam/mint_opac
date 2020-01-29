@@ -11,7 +11,8 @@ import {
   Typography
 } from "antd";
 const { Meta } = Card;
-const { Title, Text } = Typography;
+const { Title, Text } = Typography; 
+
 class ListView extends React.Component {
   render() {
     let records = extractSummaryData(this.props.data.records).item;
@@ -24,6 +25,7 @@ class ListView extends React.Component {
             key={index}
             hoverable
             actions={[<Icon type="setting" key="setting" />]}
+            onClick={_ => (window.location = record.link)}
           >
             <Row gutter={24}>
               <Col xs={24} md={6}>
